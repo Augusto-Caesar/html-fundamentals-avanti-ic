@@ -10,10 +10,14 @@
             <form name="register" method="post" action="register.php">
                 <fieldset>
                     <legend>Personal Info</legend>
-                    <label for="name">Full Name: </label>
-                    <input type="text" placeholder="Your name" required id="name">
-                    <label for="email">Email: </label>
-                    <input type="email" placeholder="Your Email" required id="email">
+                    <div id="divName">
+                        <label for="name">Full Name: </label>
+                        <input type="text" placeholder="Type in your Full Name" required id="name">
+                    </div>
+                    <div id="divEmail">
+                        <label for="email">Email: </label>
+                        <input type="email" placeholder="Type in your Email" required id="email">
+                    </div>
                 </fieldset>
                 <input type="submit" value="Register">
             </form>
