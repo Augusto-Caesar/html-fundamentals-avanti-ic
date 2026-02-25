@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Forms</title>
+    <style>
+        label{
+        margin: 10px 0;
+        display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <main>
         <section>
             <form name="register" method="post" action="register.php">
-                <fieldset>
+                <fieldset id="personalData">
                     <legend>Personal Info</legend>
                     <div id="divName">
                         <label for="name">Full Name: </label>
@@ -46,11 +52,34 @@
                             <option value="Parana">PR</option>
                         </select>
                     </div>
+                    <div id="divObservations">
+                        <label>Observations: </label>
+                        <textarea rows="3"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset id="legalEntity">
+                    <legend>Legal Entity Info</legend>
+                    <div id="divCompanyName">
+                        <label for="companyName">Company Name: </label>
+                        <input type="text" placeholder="Type in your Company Name" required id="companyName">
+                    </div>
+                    <div id="divTradeName">
+                        <label for="tradeName">Trade Name: </label>
+                        <input type="text" placeholder="Type in your Trade Name" required id="tradeName">
+                    </div>
+                    <div id="divCNPJ">
+                        <label for="cnpj">CNPJ: </label>
+                        <input type="text" placeholder="Type in your CNPJ" required id="cnpj">
+                    </div>
+                    <div id="divStateRegistry">
+                        <label for="stateRegistry">State Registry: </label>
+                        <input type="text" placeholder="Type in your State Registry" required id="stateRegistry">
+                        <input type="checkbox" value="exempt"><span>Exempt from State Registry</span>
+                    </div>
                 </fieldset>
                 <input type="submit" value="Register">
             </form>
         </section>
     </main>
-
 </body>
 </html>
